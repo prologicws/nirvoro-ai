@@ -4,7 +4,7 @@
 # In[2]:
 
 
-get_ipython().system('pip install requests beautifulsoup4 feedparser pymongo rapidfuzz selenium transformers torch')
+#get_ipython().system('pip install requests beautifulsoup4 feedparser pymongo rapidfuzz selenium transformers torch')
 import re
 import requests
 import json
