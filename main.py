@@ -1,6 +1,6 @@
 # Import functions from the individual script files
-from crawl-news-bbc import crawl_news
-from process-news-articles import process_single_article
+from crawl_news_bbc import crawl_news
+from process_news_articles import process_single_article
 
 def main():
     print("Starting the main script.")
