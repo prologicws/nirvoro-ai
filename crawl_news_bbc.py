@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[27]:
 
 
-#get_ipython().system('pip install requests beautifulsoup4 feedparser pymongo rapidfuzz selenium transformers torch')
+get_ipython().system('pip install requests beautifulsoup4 feedparser pymongo rapidfuzz selenium transformers torch')
+import os
 import re
 import requests
 import json
@@ -22,11 +23,13 @@ from datetime import datetime, timedelta
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-# In[4]:
+# In[29]:
 
 
 # MongoDB Setup
-client = MongoClient('mongodb://localhost:27017/')  # Update with your MongoDB connection URI
+#client = MongoClient('mongodb://localhost:27017/')  # Update with your MongoDB connection URI
+mongo_uri = os.getenv('MONGO_URI')  # Load from environment variables
+client = MongoClient(mongo_uri)
 db = client['news_database']
 collection = db['news_articles']
 
@@ -322,19 +325,7 @@ def crawl_news():
         driver.quit()
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[22]:
+# In[34]:
 
 
 if __name__ == "__main__":
