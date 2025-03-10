@@ -1,15 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[4]:
 
 
+import os
 import requests
 from pymongo import MongoClient
 import datetime
 
 
-# In[4]:
+# In[6]:
 
 
 # Event Registry API details
@@ -17,7 +18,7 @@ API_URL = "https://eventregistry.org/api/v1/article/getArticles"
 API_KEY = "9d8ccead-0c1f-448f-9ceb-b85f4def0063"
 
 
-# In[6]:
+# In[8]:
 
 
 # MongoDB Setup
@@ -27,7 +28,7 @@ db = client['news_database']
 collection = db['news_articles']
 
 
-# In[8]:
+# In[12]:
 
 
 def is_duplicate_article(new_article, existing_articles):
