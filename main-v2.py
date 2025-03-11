@@ -22,7 +22,7 @@ API_KEY = "9d8ccead-0c1f-448f-9ceb-b85f4def0063"
 
 
 # MongoDB Setup
-mongo_uri = os.getenv('MONGO_URI')  # Load from environment variables
+mongo_uri = os.getenv('MONGO_URL')  # Load from environment variables
 client = MongoClient(mongo_uri)
 db = client['news_database']
 collection = db['news_articles']
